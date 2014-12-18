@@ -4,10 +4,10 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>reveal.js - The HTML Presentation Framework</title>
+		<title>Setup</title>
 
-		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-		<meta name="author" content="Hakim El Hattab">
+		<meta name="description" content="Local Development Environment Setup with Vagrant">
+		<meta name="author" content="Linh M. Tran">
 
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -15,7 +15,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 		<link rel="stylesheet" href="css/reveal.min.css">
-		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+		<link rel="stylesheet" href="css/theme/sky.css" id="theme">
 
 		<!-- For syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -43,24 +43,72 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h1>Reveal.js</h1>
-					<h3>HTML Presentations Made Easy</h3>
+					<h2>Local Development Environment Setup with Vagrant</h2>
 					<p>
-						<small>Created by <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a></small>
+						<small>Created by <a href="http://linhmtran168.github.io">Linh M. Tran</a></small>
 					</p>
 				</section>
+
+        <section>
+          <h2>Agenda</h2>
+          <ol>
+            <li>Introduction</li>
+            <li>The perfect setup flow</li>
+            <li>Popular setup flows</li>
+            <li>Into Vagrant</li>
+          </ol>
+        </section>
 
 				<section>
-					<h2>Heads Up</h2>
+					<h2>Introduction</h2>
 					<p>
-						reveal.js is a framework for easily creating beautiful presentations using HTML. You'll need a browser with
-						support for CSS 3D transforms to see it in its full glory.
+            As a developer, local development environment is literally where you live and what your life depend on!
 					</p>
+          <p>
+            But setting up it is often the more boring and tedius task that all of us, developers, want to avoid
+          </p>
+          <br />
+          <h4 class="fragment">Will <b>Vagrant</b> change this?</h4>
 
-					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-					</aside>
 				</section>
+
+        <section>
+          <h2>The perfect dev environment setup flow</h2>
+          <ul>
+            <li class="fragment">Easy and Fast</li>
+            <li class="fragment">Create an environment that's as close as possible to the production environment</li>
+            <li class="fragment">Not Boring</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Some popular ways to setup dev environment</h2>
+        </section>
+
+        <section>
+          <section>
+            <h3>Do it the hard way</h3>
+            <p>Manually download all the packages, setup and config them</p>
+            <br />
+            <ul>
+              <li>Installs packages is often quite easy on Linux OS (Ubuntu, Fedor) and is a great experience to set all of them up</li>
+              <pre><code class="bash" data-trim>
+  # Ubuntu example
+  $ sudo apt-get install mysql postgresql php5-fpm php5-mcrypt nginx
+              </code></pre>
+              <li>In MacOS X, Homebrew can be used to install packages (but configuration may not as easy as in Linux Os)</li>
+              <pre><code class="bash" data-trim>
+  $ brew tap hombrew/php
+  $ brew install php56 php56-mcrypt composer nginx
+              </code></pre>
+            </ul>
+          </section>
+
+          <section>
+            <h3>Do it the hard way</h3>
+            <h5>Pros and Cons</h5>
+          </section>
+        </section>
 
 				<!-- Example of nested vertical slides -->
 				<section>
@@ -369,6 +417,7 @@ function linkify( selector ) {
 				progress: true,
 				history: true,
 				center: true,
+        width: 1200,
 
 				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
 				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
